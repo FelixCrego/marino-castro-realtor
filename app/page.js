@@ -103,70 +103,53 @@ export default function HomePage() {
   return (
     <SiteShell currentPath="/">
       <section className="section home-hero">
-        <div className="container hero-surface premium-hero">
-          <div className="hero-copy hero-copy-closer">
-            <p className="eyebrow">Marino Castro | Realtor And Real Estate Investor</p>
-            <h1>Buy, sell, and invest in New Jersey with a clear plan.</h1>
-            <p className="hero-subtitle">
-              Premium guidance for clients who want more than a generic
-              transaction.
-            </p>
-            <p className="hero-text">
-              Marino Castro combines the perspective of a licensed real estate
-              agent with the practicality of an investor. That means better
-              judgment on when to list, when to move directly, and how to make
-              each step feel deliberate.
-            </p>
-            <p className="hero-text">
-              His public business bio highlights more than two decades in real
-              estate, fluency in Spanish, and experience across distressed,
-              inherited, vacant, and value-add properties in New Jersey.
-            </p>
-            <div className="hero-actions">
-              <Link className="button button-solid" href="/contact-us">
-                Schedule Consultation
-              </Link>
-              <Link className="button button-ghost" href="/how-it-works">
-                View Process
-              </Link>
-            </div>
-            <div className="trust-grid trust-grid-closer">
-              {highlights.map((item) => (
-                <div key={item.label}>
-                  <strong>{item.value}</strong>
-                  <span>{item.label}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="hero-visual-column">
-            <div className="hero-image-panel premium-portrait-panel">
-              <img
-                src="/assets/hero-bg.webp"
-                alt="Luxury residential property exterior"
-                className="hero-background-image"
-              />
-              <div className="premium-overlay" />
-              <div className="portrait-stage">
-                <div className="portrait-frame">
-                  <img
-                    src="/assets/marino-profile.jpg"
-                    alt="Marino Castro"
-                    className="portrait-profile"
-                  />
-                </div>
-                <div className="portrait-caption">
-                  <strong>Marino Castro</strong>
-                  <span>Realtor, investor, and bilingual advisor based in New Jersey</span>
-                </div>
+        <div className="container hero-stage">
+          <div className="hero-primary">
+            <div className="hero-portrait-shell">
+              <div className="hero-portrait-glow" />
+              <div className="hero-portrait-frame">
+                <img
+                  src="/assets/marino-profile.jpg"
+                  alt="Marino Castro"
+                  className="hero-portrait-large"
+                />
+              </div>
+              <div className="hero-portrait-caption">
+                <strong>Marino Castro</strong>
+                <span>Realtor, investor, and bilingual advisor in New Jersey</span>
               </div>
             </div>
 
-            <div className="hero-form-card">
-              <OfferForm />
+            <div className="hero-copy hero-copy-minimal">
+              <p className="eyebrow">Marino Castro | New Jersey Realtor And Investor</p>
+              <h1>Talk through the property before you choose the wrong strategy.</h1>
+              <p className="hero-text">
+                From inherited homes and tenant issues to urgent timelines and
+                as-is sales, Marino helps New Jersey owners decide whether to
+                list, sell directly, or take a more strategic next step.
+              </p>
+              <div className="hero-actions">
+                <Link className="button button-solid" href="/contact-us">
+                  Schedule Consultation
+                </Link>
+                <Link className="button button-ghost" href="/how-it-works">
+                  View Process
+                </Link>
+              </div>
+              <div className="trust-grid trust-grid-closer trust-grid-compact">
+                {highlights.map((item) => (
+                  <div key={item.label}>
+                    <strong>{item.value}</strong>
+                    <span>{item.label}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
+
+          <aside className="hero-form-card sticky-form-card">
+            <OfferForm />
+          </aside>
         </div>
       </section>
 

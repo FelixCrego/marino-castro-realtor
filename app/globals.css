@@ -621,6 +621,18 @@ textarea {
   padding-top: 2.25rem;
 }
 
+.hero-stage {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(320px, 400px);
+  gap: 2rem;
+  align-items: start;
+}
+
+.hero-primary {
+  display: grid;
+  gap: 1.5rem;
+}
+
 .hero-surface {
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
@@ -630,6 +642,14 @@ textarea {
 
 .hero-copy-closer {
   padding: 2.25rem 0 1rem;
+}
+
+.hero-copy-minimal {
+  padding: 0 0 1rem;
+}
+
+.hero-copy-minimal h1 {
+  max-width: 12ch;
 }
 
 .hero-subtitle {
@@ -643,11 +663,85 @@ textarea {
   margin-top: 1.5rem;
 }
 
+.trust-grid-compact {
+  margin-top: 1.25rem;
+}
+
 .hero-visual-column {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
   gap: 1rem;
   align-items: stretch;
+}
+
+.hero-portrait-shell {
+  position: relative;
+  min-height: 680px;
+  border-radius: 36px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top center, rgba(180, 131, 58, 0.3), transparent 36%),
+    linear-gradient(180deg, #efe5d3 0%, #d7c2a1 100%);
+  border: 1px solid rgba(13, 59, 52, 0.08);
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.hero-portrait-glow {
+  position: absolute;
+  inset: auto 12% 6% 12%;
+  height: 18%;
+  border-radius: 999px;
+  background: rgba(15, 32, 28, 0.16);
+  filter: blur(36px);
+}
+
+.hero-portrait-frame {
+  position: relative;
+  z-index: 1;
+  width: min(540px, 82%);
+  aspect-ratio: 1 / 1;
+  border-radius: 34px;
+  overflow: hidden;
+  background: #f8f2e7;
+  box-shadow: 0 28px 80px rgba(16, 28, 25, 0.18);
+}
+
+.hero-portrait-large {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-portrait-caption {
+  position: absolute;
+  left: 2rem;
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 1;
+  padding: 1rem 1.15rem;
+  border-radius: 20px;
+  background: rgba(22, 39, 35, 0.8);
+  color: #f8f2e8;
+  backdrop-filter: blur(12px);
+}
+
+.hero-portrait-caption strong,
+.hero-portrait-caption span {
+  display: block;
+}
+
+.hero-portrait-caption strong {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+}
+
+.hero-portrait-caption span {
+  margin-top: 0.2rem;
+  color: rgba(248, 242, 232, 0.82);
 }
 
 .hero-image-panel {
@@ -680,6 +774,15 @@ textarea {
 .hero-form-card .offer-form {
   height: 100%;
   min-height: 620px;
+}
+
+.sticky-form-card {
+  position: sticky;
+  top: 6.5rem;
+}
+
+.sticky-form-card .offer-form {
+  min-height: auto;
 }
 
 .premium-hero {
@@ -792,6 +895,14 @@ textarea {
 
 .property-row {
   margin-block: 0.9rem 0.75rem;
+}
+
+.situation-grid {
+  grid-template-columns: 1fr;
+}
+
+.situation-grid button {
+  text-align: left;
 }
 
 .expertise-grid {
@@ -991,6 +1102,7 @@ textarea {
   }
 
   .hero-surface,
+  .hero-stage,
   .feature-split,
   .hero-visual-column,
   .process-grid {
@@ -1011,6 +1123,14 @@ textarea {
   .hero-form-card .offer-form,
   .hero-image-panel {
     min-height: auto;
+  }
+
+  .sticky-form-card {
+    position: static;
+  }
+
+  .hero-portrait-shell {
+    min-height: 540px;
   }
 
   .portrait-stage {
@@ -1070,5 +1190,20 @@ textarea {
 
   .brand-logo {
     width: 100px;
+  }
+
+  .hero-portrait-shell {
+    min-height: 420px;
+    padding: 1.25rem;
+  }
+
+  .hero-portrait-frame {
+    width: min(100%, 360px);
+  }
+
+  .hero-portrait-caption {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
   }
 }

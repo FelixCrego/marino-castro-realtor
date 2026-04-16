@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 const stepLabels = [
-  "Goal",
+  "Situation",
   "Location",
   "Property",
   "Timeline",
@@ -11,11 +11,15 @@ const stepLabels = [
   "Review"
 ];
 
-const goalOptions = [
-  "Sell my property",
-  "Buy with guidance",
-  "Discuss investing",
-  "Need a direct-sale option"
+const situationOptions = [
+  "Sell My House As-Is (No Repairs)",
+  "Stop Foreclosure Fast",
+  "Sell Inherited Property",
+  "Selling a Rental with Tenants",
+  "Urgent Timeline",
+  "Probate / Estate Sale",
+  "Divorce Transition",
+  "Vacant Home Costs"
 ];
 
 const locationOptions = [
@@ -47,7 +51,7 @@ export function OfferForm({ compact = false }) {
   const [step, setStep] = useState(0);
   const [submitted, setSubmitted] = useState(false);
   const [form, setForm] = useState({
-    goal: goalOptions[0],
+    situation: situationOptions[0],
     location: locationOptions[0],
     propertyType: propertyTypes[0],
     street: "",
@@ -76,10 +80,10 @@ export function OfferForm({ compact = false }) {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    const subject = encodeURIComponent(`New website lead: ${form.goal}`);
+    const subject = encodeURIComponent(`New website lead: ${form.situation}`);
     const body = encodeURIComponent(
       [
-        `Goal: ${form.goal}`,
+        `Situation: ${form.situation}`,
         `Location: ${form.location}`,
         `Property type: ${form.propertyType}`,
         `Address: ${[form.street, form.city, form.state, form.zip].filter(Boolean).join(", ") || "Not provided"}`,
@@ -100,7 +104,7 @@ export function OfferForm({ compact = false }) {
     <form className={`offer-form ${compact ? "compact" : ""}`} onSubmit={handleSubmit}>
       <div className="offer-form-head">
         <div>
-          <p className="eyebrow">Start The Conversation</p>
+          <p className="eyebrow">Find Options For Your Situation</p>
           <h3>Step {progress}</h3>
         </div>
         <span>{stepLabels[step]}</span>
@@ -122,14 +126,14 @@ export function OfferForm({ compact = false }) {
         <>
           {step === 0 && (
             <fieldset className="form-step">
-              <label>What do you need help with?</label>
-              <div className="choice-grid">
-                {goalOptions.map((option) => (
+              <label>Which situation best matches the property?</label>
+              <div className="choice-grid situation-grid">
+                {situationOptions.map((option) => (
                   <button
                     key={option}
                     type="button"
-                    className={form.goal === option ? "selected" : ""}
-                    onClick={() => updateField("goal", option)}
+                    className={form.situation === option ? "selected" : ""}
+                    onClick={() => updateField("situation", option)}
                   >
                     {option}
                   </button>
@@ -253,8 +257,8 @@ export function OfferForm({ compact = false }) {
           {step === 5 && (
             <fieldset className="form-step review-list">
               <div>
-                <span>Goal</span>
-                <strong>{form.goal}</strong>
+                <span>Situation</span>
+                <strong>{form.situation}</strong>
               </div>
               <div>
                 <span>Location</span>
