@@ -2,8 +2,8 @@ import Link from "next/link";
 import { SiteShell } from "../../components/site-shell";
 
 export const metadata = {
-  title: "About Us | Marino Castro",
-  description: "Learn about Marino Castro's New Jersey real estate and investment approach."
+  title: "About | Marino Castro",
+  description: "Learn more about Marino Castro's real estate approach in New Jersey."
 };
 
 export default function AboutPage() {
@@ -11,56 +11,56 @@ export default function AboutPage() {
     <SiteShell currentPath="/about-us">
       <section className="page-hero">
         <div className="container narrow">
-          <p className="eyebrow">About Us</p>
-          <h1>Built for clients who need real estate options, not generic pitches.</h1>
+          <p className="eyebrow">About</p>
+          <h1>A more personal approach to New Jersey real estate.</h1>
           <p>
-            Marino Castro&apos;s public profile combines faith, family values, and
-            real estate experience with a practical investor mindset.
+            Marino Castro is positioned for clients who value discretion, clear
+            communication, and a more measured experience from first
+            conversation to closing.
           </p>
         </div>
       </section>
 
       <section className="section">
-        <div className="container split-layout">
-          <div>
-            <h2>New Jersey focus, practical execution.</h2>
+        <div className="container signature-grid clean-two-col">
+          <div className="signature-copy">
+            <h2>Experience, perspective, and local focus.</h2>
             <p>
-              Public business listings describe Marino as a real estate
-              investor, wholesaler, and licensed agent with more than 20 years
-              in the industry. That blend shapes how the site is written: clear
-              strategy, direct communication, and flexibility around the kind of
-              transaction you actually need.
+              Marino&apos;s background combines years in real estate with an
+              investor&apos;s understanding of property value, timing, and
+              opportunity. That perspective helps clients make decisions with
+              more clarity and less noise.
             </p>
             <p>
-              The positioning is intentionally broader than a standard
-              agent-only site. It speaks to homeowners, investors, and families
-              dealing with inherited homes, repairs, vacancies, or timing
-              pressure across New Jersey.
+              The brand is intentionally presented with a cleaner, more refined
+              feel: service-first, relationship-driven, and centered on New
+              Jersey markets.
             </p>
           </div>
-          <div className="info-card profile-card">
-            <strong>Base</strong>
-            <p>Newark, NJ and surrounding communities</p>
-            <strong>Phone</strong>
+
+          <aside className="elegant-contact-card">
+            <span>Based In</span>
+            <h3>Newark, New Jersey</h3>
+            <p>Serving surrounding communities with buyer, seller, and investment guidance.</p>
             <a href="tel:9738513790">(973) 851-3790</a>
-            <strong>Email</strong>
             <a href="mailto:ocastro@buymyhome.net">ocastro@buymyhome.net</a>
-          </div>
+          </aside>
         </div>
       </section>
 
-      <section className="section section-dark">
-        <div className="container narrow center-text">
-          <p className="eyebrow">Core Positioning</p>
-          <h2>Representation when the market makes sense. Direct solutions when it does not.</h2>
+      <section className="section final-cta-section">
+        <div className="container final-cta-panel">
+          <p className="eyebrow">Private Consultation</p>
+          <h2>Connect with Marino directly.</h2>
           <p>
-            Marino&apos;s edge is not forcing every client into one lane. The right
-            answer might be a strategic listing, an investor conversation, or a
-            faster as-is solution.
+            Reach out for a more thoughtful conversation about your next real
+            estate move in New Jersey.
           </p>
-          <Link className="button button-solid" href="/contact-us">
-            Start The Conversation
-          </Link>
+          <div className="hero-actions">
+            <Link className="button button-solid" href="/contact-us">
+              Contact Marino
+            </Link>
+          </div>
         </div>
       </section>
     </SiteShell>

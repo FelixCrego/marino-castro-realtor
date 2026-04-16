@@ -1,28 +1,27 @@
 import Link from "next/link";
-import { PrivateConsultationCard } from "../components/private-consultation-card";
 import { SiteShell } from "../components/site-shell";
 
 const metrics = [
   { value: "20+ Years", label: "Real estate experience" },
-  { value: "NJ Focused", label: "Serving Newark and surrounding markets" },
-  { value: "English / Spanish", label: "Clear communication at every step" }
+  { value: "Newark, NJ", label: "Serving surrounding New Jersey markets" },
+  { value: "English / Spanish", label: "Clear communication throughout the process" }
 ];
 
 const services = [
   {
-    title: "Seller representation",
+    title: "Seller Representation",
     body:
-      "Thoughtful pricing, elevated presentation, and measured negotiation for owners who want strong market positioning."
+      "Thoughtful pricing, elevated marketing, and steady negotiation for owners who want their property positioned with intention."
   },
   {
-    title: "Complex property guidance",
+    title: "Buyer Guidance",
     body:
-      "Support for inherited homes, tenant situations, probate timelines, distressed property, and owners who need clarity fast."
+      "Clear advice, responsive communication, and local perspective for buyers who want a more composed experience from search to closing."
   },
   {
-    title: "Investor perspective",
+    title: "Investment Perspective",
     body:
-      "Marino combines the lens of a realtor with real investor logic, so the recommendation fits the property instead of forcing a generic path."
+      "Marino's investor background adds an extra layer of practical judgment when evaluating value, opportunity, and long-term positioning."
   }
 ];
 
@@ -38,21 +37,21 @@ const markets = [
 const process = [
   {
     step: "01",
-    title: "Private discovery",
+    title: "Initial Consultation",
     body:
-      "Start with a direct conversation about the property, timing, and what you want the outcome to be."
+      "Start with a private conversation about the property, your timing, and what you want the result to be."
   },
   {
     step: "02",
-    title: "Strategic recommendation",
+    title: "Strategic Direction",
     body:
-      "Marino helps determine whether listing, direct sale, or another route makes the most sense for your market and situation."
+      "Marino helps shape the right next move with a clearer view of market fit, timing, and presentation."
   },
   {
     step: "03",
-    title: "Confident execution",
+    title: "Confident Execution",
     body:
-      "Once the direction is clear, the transaction is managed with cleaner communication and fewer surprises."
+      "Once the plan is set, the process is handled with cleaner communication, steadier guidance, and fewer surprises."
   }
 ];
 
@@ -69,36 +68,21 @@ export default function HomePage() {
             />
             <div className="luxury-hero-overlay" />
 
-            <div className="luxury-hero-content">
-              <p className="eyebrow light-eyebrow">
-                Marino Castro | New Jersey Realtor And Investor
-              </p>
-              <h1>Clean, high-end real estate guidance for New Jersey sellers and buyers.</h1>
+            <div className="luxury-hero-content luxury-hero-clean">
+              <p className="eyebrow light-eyebrow">Marino Castro | New Jersey Realtor</p>
+              <h1>Refined representation for New Jersey real estate.</h1>
               <p>
-                A more private, polished approach for clients who need strong
-                market judgment, investor-level insight, and a clearer path
-                forward.
+                Marino Castro offers a more private, strategy-led experience for
+                buyers, sellers, and investors who value clear advice, strong
+                presentation, and disciplined execution.
               </p>
               <div className="hero-actions">
                 <Link className="button button-solid light-button" href="/contact-us">
-                  Schedule Consultation
+                  Schedule Private Consultation
                 </Link>
-                <a
-                  className="button button-ghost light"
-                  href="https://www.instagram.com/marinocastro23/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  View Instagram
-                </a>
-              </div>
-            </div>
-
-            <div className="hero-signature-card">
-              <img src="/assets/marino-profile.jpg" alt="Marino Castro" />
-              <div>
-                <strong>Marino Castro</strong>
-                <span>Realtor, investor, and bilingual advisor based in New Jersey</span>
+                <Link className="button button-ghost light" href="/about-us">
+                  Meet Marino
+                </Link>
               </div>
             </div>
           </div>
@@ -115,34 +99,31 @@ export default function HomePage() {
       </section>
 
       <section className="section signature-section">
-        <div className="container signature-grid">
+        <div className="container signature-grid clean-two-col">
           <div className="signature-copy">
-            <p className="eyebrow">Private Advisory</p>
-            <h2>Representation that feels measured, not transactional.</h2>
+            <p className="eyebrow">About Marino</p>
+            <h2>A more composed real estate experience, built around judgment and trust.</h2>
             <p>
-              The site is now centered around a quieter luxury feel: strong
-              photography, restrained typography, and focused messaging instead
-              of a busy lead-generation layout.
+              Marino Castro is positioned for clients who want more than a
+              generic transaction. The approach is calm, personal, and centered
+              on making the right move for the property rather than forcing a
+              one-size-fits-all process.
             </p>
             <p>
-              Marino&apos;s positioning works best when it feels credible and
-              composed. That means clear seller strategy, investor-grade
-              judgment, and guidance for complex property situations without
-              turning the brand into a cash-buyer template.
+              His background in both real estate and investing adds perspective,
+              but the brand stays focused on service, presentation, and results.
             </p>
-
-            <div className="signature-note">
-              <span>Core Positioning</span>
-              <p>
-                Licensed real estate guidance with practical experience across
-                distressed, inherited, tenant-occupied, and value-add property
-                decisions in New Jersey.
-              </p>
-            </div>
           </div>
 
-          <aside className="consultation-rail">
-            <PrivateConsultationCard />
+          <aside className="elegant-contact-card">
+            <span>Private Consultation</span>
+            <h3>Newark, New Jersey</h3>
+            <p>
+              Buyers, sellers, and select investors can reach out directly for a
+              more private conversation.
+            </p>
+            <a href="tel:9738513790">(973) 851-3790</a>
+            <a href="mailto:ocastro@buymyhome.net">ocastro@buymyhome.net</a>
           </aside>
         </div>
       </section>
@@ -150,8 +131,8 @@ export default function HomePage() {
       <section className="section editorial-section">
         <div className="container">
           <div className="section-heading editorial-heading">
-            <p className="eyebrow">What Marino Brings</p>
-            <h2>A more refined client experience across traditional and complex sales.</h2>
+            <p className="eyebrow">Services</p>
+            <h2>Representation designed to feel polished, clear, and personal.</h2>
           </div>
 
           <div className="luxury-card-grid">
@@ -167,26 +148,25 @@ export default function HomePage() {
 
       <section className="section market-section">
         <div className="container market-grid">
-          <div className="market-visual">
-            <img
-              src="/assets/buying-house.webp"
-              alt="Clients reviewing a home purchase"
-            />
-          </div>
-
           <div className="market-copy">
-            <p className="eyebrow">Primary Markets</p>
-            <h2>Focused on the New Jersey markets where relationships and timing matter.</h2>
+            <p className="eyebrow">Markets</p>
+            <h2>Focused on the New Jersey communities where local knowledge still matters.</h2>
             <p>
               Marino serves clients in and around Newark with a style that is
-              calm, direct, and more tailored than the average high-volume real
-              estate site.
+              more measured than the average high-volume real estate site.
             </p>
             <div className="market-list">
               {markets.map((market) => (
                 <span key={market}>{market}</span>
               ))}
             </div>
+          </div>
+
+          <div className="market-visual">
+            <img
+              src="/assets/buying-house.webp"
+              alt="Clients reviewing a home purchase"
+            />
           </div>
         </div>
       </section>
@@ -212,19 +192,24 @@ export default function HomePage() {
 
       <section className="section final-cta-section">
         <div className="container final-cta-panel">
-          <p className="eyebrow">Start The Conversation</p>
-          <h2>Discuss the property privately and choose the strategy that fits.</h2>
+          <p className="eyebrow">Get In Touch</p>
+          <h2>Begin with a private conversation about your next move.</h2>
           <p>
-            Reach out for listing guidance, a second opinion on a direct sale,
-            or help navigating a more complex New Jersey property situation.
+            Reach out for buyer guidance, seller representation, or a more
+            strategic discussion around a New Jersey property opportunity.
           </p>
           <div className="hero-actions">
             <Link className="button button-solid" href="/contact-us">
               Contact Marino
             </Link>
-            <Link className="button button-ghost" href="/about-us">
-              Learn More
-            </Link>
+            <a
+              className="button button-ghost"
+              href="https://www.instagram.com/marinocastro23/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Instagram
+            </a>
           </div>
         </div>
       </section>

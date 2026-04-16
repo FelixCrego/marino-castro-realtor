@@ -1,24 +1,26 @@
-import { OfferForm } from "../../components/offer-form";
+import { PrivateConsultationCard } from "../../components/private-consultation-card";
 import { SiteShell } from "../../components/site-shell";
 
 export const metadata = {
-  title: "Contact Us | Marino Castro",
-  description: "Contact Marino Castro about listings, investment opportunities, and direct-sale solutions in New Jersey."
+  title: "Contact | Marino Castro",
+  description: "Schedule a private real estate consultation with Marino Castro in New Jersey."
 };
 
 export default function ContactPage() {
   return (
     <SiteShell currentPath="/contact-us">
-      <section className="page-hero">
-        <div className="container split-layout align-start">
-          <div>
-            <p className="eyebrow">Contact Us</p>
-            <h1>Tell Marino what you need and start the right real estate conversation.</h1>
+      <section className="page-hero contact-hero-clean">
+        <div className="container signature-grid clean-two-col">
+          <div className="signature-copy">
+            <p className="eyebrow">Contact</p>
+            <h1>Start with a private real estate conversation.</h1>
             <p>
-              Use the form for listings, seller questions, direct-sale
-              scenarios, or NJ investment conversations.
+              Reach out to Marino Castro for buyer guidance, seller
+              representation, or a more strategic discussion about a New Jersey
+              property.
             </p>
-            <div className="contact-stack">
+
+            <div className="contact-stack clean-contact-stack">
               <div className="info-card contact-card">
                 <span>Phone</span>
                 <a href="tel:9738513790">(973) 851-3790</a>
@@ -29,30 +31,10 @@ export default function ContactPage() {
                   <a href="mailto:ocastro@buymyhome.net">ocastro@buymyhome.net</a>
                 </strong>
               </div>
-              <div className="info-card contact-card">
-                <span>Social</span>
-                <strong>
-                  <a
-                    href="https://www.instagram.com/marinocastro23/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Instagram
-                  </a>
-                  {" / "}
-                  <a
-                    href="https://www.facebook.com/marino.castro/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Facebook
-                  </a>
-                </strong>
-              </div>
             </div>
           </div>
 
-          <OfferForm />
+          <PrivateConsultationCard />
         </div>
       </section>
     </SiteShell>
