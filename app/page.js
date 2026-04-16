@@ -4,85 +4,98 @@ import { SiteShell } from "../components/site-shell";
 
 const highlights = [
   { value: "20+ Years", label: "Real estate experience" },
-  { value: "410", label: "Instagram followers" },
-  { value: "218", label: "Public posts and updates" }
+  { value: "Agent + Investor", label: "Two perspectives, one strategy" },
+  { value: "English / Spanish", label: "Clear communication for more families" }
 ];
 
-const serviceCards = [
+const valueProps = [
   {
-    image: "/assets/no-hidden-fees.webp",
-    title: "Representation with strategy",
+    title: "Strategic listing guidance",
     body:
-      "Work with Marino on pricing, positioning, negotiations, and the right plan for your next move in New Jersey."
+      "When maximizing market value is the right play, Marino positions the property with clear pricing, presentation, and negotiation strategy."
   },
   {
-    image: "/assets/no-repairs.webp",
-    title: "Direct-sale solutions",
+    title: "Direct-sale flexibility",
     body:
-      "If speed matters more than showings and prep work, Marino can help evaluate direct investor options and as-is scenarios."
+      "When time, repairs, probate, or tenant issues are driving the decision, Marino can help evaluate cleaner off-market solutions."
   },
   {
-    image: "/assets/no-staging.webp",
-    title: "Investor-minded guidance",
+    title: "Investor-level analysis",
     body:
-      "From off-market conversations to value-add opportunities, the site is built for owners and investors who need practical options."
+      "Marino's background in investing, wholesaling, and acquisitions brings sharper judgment to pricing, upside, and deal structure."
   }
 ];
 
-const scenarios = [
-  "Inherited property",
-  "Vacant homes",
-  "Fire-damaged houses",
-  "Probate situations",
-  "Tenant issues",
-  "Outdated rentals",
-  "Off-market opportunities",
-  "Seller financing conversations"
+const expertiseCards = [
+  {
+    title: "Distressed and inherited property",
+    body:
+      "Public business bio details point to experience with probate, vacant homes, fire damage, foreclosures, and owners who need a practical path forward."
+  },
+  {
+    title: "Faith, family, and trust",
+    body:
+      "Marino's public profile emphasizes a faith-first, family-focused approach, which is reflected in the tone of the brand and the client experience."
+  },
+  {
+    title: "NJ local knowledge",
+    body:
+      "The site is written for New Jersey property owners, buyers, and investors who want clear recommendations instead of generic national-template advice."
+  }
+];
+
+const serviceAreas = [
+  "Newark",
+  "Essex County",
+  "Union County",
+  "Middlesex County",
+  "Hudson County",
+  "Passaic County"
 ];
 
 const processSteps = [
   {
-    title: "Start with your goal",
+    title: "Start with a private conversation",
     body:
-      "Tell Marino whether you want to list, buy, invest, or explore a direct sale. The first conversation is about fit, not pressure."
+      "Share the property, your timing, and what you're trying to accomplish. Marino starts by identifying the right strategy, not forcing a canned process."
   },
   {
-    title: "Review the property and market fit",
+    title: "Review the strongest path",
     body:
-      "You get a realistic look at condition, timeline, and whether a retail listing or investor path makes more sense."
+      "You'll get a grounded recommendation based on condition, equity, location, and market fit, whether that's listing, buying, investing, or a direct sale."
   },
   {
-    title: "Move with a clear plan",
+    title: "Move forward with clarity",
     body:
-      "Once the strategy is set, Marino helps you execute with confidence, from walkthrough to contract to closing."
+      "Once the approach is set, Marino helps manage the next steps cleanly so the transaction feels controlled, not chaotic."
   }
 ];
 
 const comparisonRows = [
   {
-    label: "Best fit",
-    listing: "Owners focused on market exposure and maximizing retail price",
-    direct: "Owners prioritizing convenience, speed, or distressed-property solutions"
+    label: "Ideal situation",
+    listing: "Owners who want full market exposure and retail pricing strategy",
+    direct: "Owners who care more about simplicity, speed, or condition-based flexibility"
   },
   {
-    label: "Repairs",
-    listing: "Recommended when presentation affects value",
-    direct: "Can often be sold as-is"
+    label: "Property condition",
+    listing: "May benefit from selective prep and presentation",
+    direct: "Often works best for as-is properties"
   },
   {
-    label: "Showings",
-    listing: "Buyer traffic, listing prep, and agent coordination",
+    label: "Buyer activity",
+    listing: "Showings, staging decisions, and open-market interest",
     direct: "Private review with fewer moving parts"
   },
   {
     label: "Timeline",
-    listing: "Depends on market response and financing",
-    direct: "Flexible and often faster"
+    listing: "Depends on demand, financing, and inspections",
+    direct: "Often faster and more controlled"
   },
   {
-    label: "Strategy",
-    listing: "MLS exposure, pricing, and negotiation",
-    direct: "Problem-solving around condition, equity, and speed"
+    label: "Decision style",
+    listing: "Best for owners optimizing price",
+    direct: "Best for owners optimizing convenience"
   }
 ];
 
@@ -90,27 +103,31 @@ export default function HomePage() {
   return (
     <SiteShell currentPath="/">
       <section className="section home-hero">
-        <div className="container hero-surface">
+        <div className="container hero-surface premium-hero">
           <div className="hero-copy hero-copy-closer">
-            <p className="eyebrow">New Jersey Real Estate Agent And Investor</p>
-            <h1>Clear real estate options for sellers, buyers, and investors in NJ.</h1>
+            <p className="eyebrow">Marino Castro | Realtor And Real Estate Investor</p>
+            <h1>Buy, sell, and invest in New Jersey with a clear plan.</h1>
             <p className="hero-subtitle">
-              God first. Family focused. Practical guidance backed by real
-              estate experience.
+              Premium guidance for clients who want more than a generic
+              transaction.
             </p>
             <p className="hero-text">
-              Marino Castro helps clients navigate listings, investment
-              opportunities, and direct-sale situations without unnecessary
-              friction. The public Instagram profile highlights the same values
-              seen throughout the business: faith, family, and a real estate
-              mindset built around action.
+              Marino Castro combines the perspective of a licensed real estate
+              agent with the practicality of an investor. That means better
+              judgment on when to list, when to move directly, and how to make
+              each step feel deliberate.
+            </p>
+            <p className="hero-text">
+              His public business bio highlights more than two decades in real
+              estate, fluency in Spanish, and experience across distressed,
+              inherited, vacant, and value-add properties in New Jersey.
             </p>
             <div className="hero-actions">
               <Link className="button button-solid" href="/contact-us">
-                Book A Call
+                Schedule Consultation
               </Link>
-              <Link className="button button-ghost" href="/about-us">
-                Learn More
+              <Link className="button button-ghost" href="/how-it-works">
+                View Process
               </Link>
             </div>
             <div className="trust-grid trust-grid-closer">
@@ -124,24 +141,28 @@ export default function HomePage() {
           </div>
 
           <div className="hero-visual-column">
-            <div className="hero-image-panel">
+            <div className="hero-image-panel premium-portrait-panel">
               <img
                 src="/assets/hero-bg.webp"
-                alt="A residential property exterior"
+                alt="Luxury residential property exterior"
                 className="hero-background-image"
               />
-              <div className="hero-badge">
-                <img
-                  src="/assets/marino-profile.jpg"
-                  alt="Marino Castro"
-                  className="hero-badge-avatar"
-                />
-                <div>
+              <div className="premium-overlay" />
+              <div className="portrait-stage">
+                <div className="portrait-frame">
+                  <img
+                    src="/assets/marino-profile.jpg"
+                    alt="Marino Castro"
+                    className="portrait-profile"
+                  />
+                </div>
+                <div className="portrait-caption">
                   <strong>Marino Castro</strong>
-                  <span>Real estate agent, investor, and Spanish-speaking advisor</span>
+                  <span>Realtor, investor, and bilingual advisor based in New Jersey</span>
                 </div>
               </div>
             </div>
+
             <div className="hero-form-card">
               <OfferForm />
             </div>
@@ -152,61 +173,43 @@ export default function HomePage() {
       <section className="section">
         <div className="container feature-split">
           <div className="feature-copy-block">
-            <div className="mini-profile">
-              <img
-                src="/assets/marino-profile.jpg"
-                alt="Marino Castro profile"
-                className="mini-avatar"
-              />
-              <div>
-                <strong>Marino Castro</strong>
-                <span>Based in Newark and serving surrounding New Jersey communities</span>
-              </div>
-            </div>
-            <p className="eyebrow">Built Around Real Situations</p>
-            <h2>Licensed-agent thinking with investor-level practicality.</h2>
+            <p className="eyebrow">Premium Service</p>
+            <h2>Need to make the right move in New Jersey real estate?</h2>
             <p>
-              Public business listings describe Marino as a real estate
-              investor, wholesaler, and licensed agent with more than 20 years
-              in the industry. That combination matters because not every
-              property or client goal belongs in the same sales process.
+              This brand is designed for clients who want judgment, discretion,
+              and flexibility. Marino helps sellers who need market exposure,
+              owners who want a cleaner direct-sale route, buyers who need
+              stronger representation, and investors looking for clearer deal
+              analysis.
             </p>
             <p>
-              Some sellers need full market representation. Others need direct
-              answers around repairs, probate, vacancies, or difficult tenants.
-              This site is positioned to support both conversations.
+              Instead of pushing every client toward the same answer, the site
+              is structured around a premium consultative approach: understand
+              the property first, define the objective second, then choose the
+              right execution path.
             </p>
           </div>
 
           <div className="portrait-card">
             <img
               src="/assets/buying-house.webp"
-              alt="A buyer receiving keys to a home"
+              alt="Clients completing a home purchase"
             />
           </div>
         </div>
       </section>
 
-      <section className="section condition-section" id="services">
+      <section className="section accent-section">
         <div className="container">
           <div className="section-heading center-heading">
-            <p className="eyebrow">Services</p>
-            <h2>One brand, multiple ways to solve the deal.</h2>
-            <p>
-              The structure follows the premium feel of the reference site, but
-              the messaging is tuned for Marino&apos;s NJ audience and public
-              profile.
-            </p>
+            <p className="eyebrow">What You Get</p>
+            <h2>Clean advice, elevated presentation, and realistic execution.</h2>
           </div>
 
           <div className="card-grid thirds">
-            {serviceCards.map((item) => (
-              <article className="info-card image-card" key={item.title}>
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="section-card-image"
-                />
+            {valueProps.map((item) => (
+              <article className="info-card" key={item.title}>
+                <span className="mini-tag">Premium</span>
                 <h3>{item.title}</h3>
                 <p>{item.body}</p>
               </article>
@@ -215,25 +218,36 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section section-dark testimonial-band">
-        <div className="container">
-          <div className="section-heading light-heading center-heading">
-            <p className="eyebrow">Common Situations</p>
-            <h2>Problems Marino is already positioned to help solve.</h2>
+      <section className="section section-dark">
+        <div className="container split-layout align-start">
+          <div className="section-heading light-heading">
+            <p className="eyebrow">Why Marino</p>
+            <h2>The value of working with an agent who understands investor logic.</h2>
             <p>
-              Public bio details point to experience with distressed assets,
-              vacant properties, and motivated-seller situations, not just
-              standard retail transactions.
+              Marino's public profile presents a combination that most polished
+              brokerage sites do not: faith-led communication, family-centered
+              trust, and real experience across investor-grade property
+              decisions.
             </p>
           </div>
 
-          <div className="pill-grid">
-            {scenarios.map((item) => (
-              <span className="scenario-pill" key={item}>
-                {item}
-              </span>
-            ))}
+          <div className="location-panel">
+            <span>Primary Markets</span>
+            <ul>
+              {serviceAreas.map((area) => (
+                <li key={area}>{area}</li>
+              ))}
+            </ul>
           </div>
+        </div>
+
+        <div className="container card-grid thirds expertise-grid">
+          {expertiseCards.map((item) => (
+            <article className="info-card dark-card" key={item.title}>
+              <h3>{item.title}</h3>
+              <p>{item.body}</p>
+            </article>
+          ))}
         </div>
       </section>
 
@@ -241,7 +255,7 @@ export default function HomePage() {
         <div className="container">
           <div className="section-heading center-heading">
             <p className="eyebrow">How It Works</p>
-            <h2>A simple process whether you are listing, investing, or selling direct.</h2>
+            <h2>A straightforward process designed to feel private and polished.</h2>
           </div>
 
           <div className="process-grid">
@@ -259,19 +273,19 @@ export default function HomePage() {
       <section className="section comparison-section">
         <div className="container">
           <div className="section-heading center-heading">
-            <p className="eyebrow">Two Paths</p>
-            <h2>Not every property should follow the same playbook.</h2>
+            <p className="eyebrow">A Fair Comparison</p>
+            <h2>List traditionally when it serves the goal. Move directly when it does not.</h2>
             <p>
-              Marino can help evaluate whether your situation belongs in a
-              traditional listing strategy or a direct investor-style solution.
+              Marino can help you weigh the difference between a full retail
+              strategy and a more direct investor-oriented solution.
             </p>
           </div>
 
           <div className="comparison-card">
             <div className="comparison-head">
               <span>Decision Point</span>
-              <span>List With Marino</span>
-              <span>Direct Sale Option</span>
+              <span>Traditional Listing</span>
+              <span>Direct Solution</span>
             </div>
             {comparisonRows.map((row) => (
               <div className="comparison-row" key={row.label}>
@@ -288,13 +302,12 @@ export default function HomePage() {
         <div className="container">
           <div className="cta-panel cta-panel-closer">
             <div>
-              <p className="eyebrow">Next Step</p>
-              <h2>Start the conversation before the property starts costing you time.</h2>
+              <p className="eyebrow">Private Consultation</p>
+              <h2>Talk through the property before you commit to the wrong strategy.</h2>
               <p>
-                Reach out for a listing strategy, an investment conversation, or
-                a direct-solution review. Marino&apos;s public social profiles and
-                business bio point to the same thing: this is a relationship-led
-                real estate brand, not a generic lead form.
+                Reach out for listing guidance, a direct-sale review, or an
+                investment conversation. The experience is designed to feel
+                clean, premium, and specific to your situation.
               </p>
             </div>
             <div className="cta-actions">
@@ -307,7 +320,7 @@ export default function HomePage() {
                 target="_blank"
                 rel="noreferrer"
               >
-                Instagram
+                View Instagram
               </a>
             </div>
           </div>

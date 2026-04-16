@@ -2,10 +2,10 @@ import Link from "next/link";
 
 const navItems = [
   { href: "/", label: "Home" },
-  { href: "/about-us", label: "About Us" },
-  { href: "/how-it-works", label: "How It Works" },
+  { href: "/about-us", label: "About" },
+  { href: "/how-it-works", label: "Process" },
   { href: "/faqs", label: "FAQs" },
-  { href: "/contact-us", label: "Contact Us" }
+  { href: "/contact-us", label: "Contact" }
 ];
 
 export function SiteShell({ currentPath = "/", children }) {
@@ -13,35 +13,19 @@ export function SiteShell({ currentPath = "/", children }) {
     <div className="site-frame">
       <div className="utility-bar">
         <div className="container utility-inner">
-          <span>Talk to Marino about listings, investors, and direct-sale options</span>
-          <div className="utility-actions">
-            <a href="tel:9738513790">(973) 851-3790</a>
-            <a
-              href="https://www.instagram.com/marinocastro23/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Instagram
-            </a>
-            <a
-              href="https://www.facebook.com/marino.castro/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Facebook
-            </a>
-          </div>
+          <span>Private consultations for sellers, buyers, and investors in New Jersey</span>
+          <a href="tel:9738513790">(973) 851-3790</a>
         </div>
       </div>
 
       <header className="site-header">
         <div className="container header-inner">
-          <Link className="brand" href="/">
-            <span className="brand-mark">MC</span>
-            <span>
-              <strong>Marino Castro</strong>
-              <small>New Jersey Real Estate Agent And Investor</small>
-            </span>
+          <Link className="brand brand-with-logo" href="/">
+            <img
+              src="/assets/marino-wordmark.svg"
+              alt="Marino Castro"
+              className="brand-logo premium-wordmark"
+            />
           </Link>
 
           <nav className="site-nav" aria-label="Primary">
@@ -57,7 +41,7 @@ export function SiteShell({ currentPath = "/", children }) {
           </nav>
 
           <Link className="button button-solid" href="/contact-us">
-            Contact Marino
+            Schedule Call
           </Link>
         </div>
       </header>
@@ -69,9 +53,9 @@ export function SiteShell({ currentPath = "/", children }) {
           <div>
             <h3>Contact Details</h3>
             <p>
-              Newark, NJ
+              Newark, New Jersey
               <br />
-              Serving surrounding New Jersey communities
+              Realtor and real estate investor serving surrounding NJ markets
             </p>
             <p>
               <a href="tel:9738513790">(973) 851-3790</a>
@@ -92,8 +76,8 @@ export function SiteShell({ currentPath = "/", children }) {
           <div>
             <h4>Follow Marino</h4>
             <p>
-              Keep up with Marino&apos;s public updates, real estate content, and
-              community presence across social media.
+              Stay connected through Marino&apos;s public social channels and
+              reach out directly for private opportunities.
             </p>
             <div className="footer-social">
               <a
