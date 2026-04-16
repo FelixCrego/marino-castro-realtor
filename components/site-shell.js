@@ -11,13 +11,6 @@ const navItems = [
 export function SiteShell({ currentPath = "/", children }) {
   return (
     <div className="site-frame">
-      <div className="utility-bar">
-        <div className="container utility-inner">
-          <span>Private consultations for sellers, buyers, and investors in New Jersey</span>
-          <a href="tel:9738513790">(973) 851-3790</a>
-        </div>
-      </div>
-
       <header className="site-header">
         <div className="container header-inner">
           <Link className="brand brand-with-logo" href="/">
@@ -40,9 +33,14 @@ export function SiteShell({ currentPath = "/", children }) {
             ))}
           </nav>
 
-          <Link className="button button-solid" href="/contact-us">
-            Schedule Call
-          </Link>
+          <div className="header-contact">
+            <a className="header-phone" href="tel:9738513790">
+              (973) 851-3790
+            </a>
+            <Link className="button button-solid" href="/contact-us">
+              Private Consultation
+            </Link>
+          </div>
         </div>
       </header>
 
@@ -51,7 +49,7 @@ export function SiteShell({ currentPath = "/", children }) {
       <footer className="site-footer">
         <div className="container footer-grid">
           <div>
-            <h3>Contact Details</h3>
+            <h3>Marino Castro</h3>
             <p>
               Newark, New Jersey
               <br />
@@ -64,7 +62,7 @@ export function SiteShell({ currentPath = "/", children }) {
             </p>
           </div>
           <div>
-            <h4>Important Links</h4>
+            <h4>Navigate</h4>
             <ul className="footer-links">
               {navItems.map((item) => (
                 <li key={item.href}>
@@ -74,29 +72,31 @@ export function SiteShell({ currentPath = "/", children }) {
             </ul>
           </div>
           <div>
-            <h4>Follow Marino</h4>
+            <h4>Social</h4>
             <p>
-              Stay connected through Marino&apos;s public social channels and
-              reach out directly for private opportunities.
+              Follow Marino on his public social channels or reach out directly
+              for a private conversation.
             </p>
-            <div className="footer-social">
-              <a
-                className="button button-solid footer-button"
-                href="https://www.instagram.com/marinocastro23/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Instagram
-              </a>
-              <a
-                className="button button-ghost footer-button"
-                href="https://www.facebook.com/marino.castro/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Facebook
-              </a>
-            </div>
+            <ul className="footer-links social-links">
+              <li>
+                <a
+                  href="https://www.instagram.com/marinocastro23/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Instagram
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/marino.castro/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Facebook
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
         <div className="container footer-bottom">
