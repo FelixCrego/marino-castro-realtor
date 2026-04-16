@@ -1656,11 +1656,201 @@ body {
   margin-top: 1.5rem;
 }
 
+.broker-hero {
+  padding: 2rem 0 0;
+}
+
+.broker-hero-frame {
+  position: relative;
+  min-height: 720px;
+  border-radius: 34px;
+  overflow: hidden;
+  box-shadow: 0 30px 90px rgba(18, 26, 24, 0.14);
+}
+
+.broker-hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.broker-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(17, 23, 22, 0.2) 0%, rgba(17, 23, 22, 0.54) 100%),
+    linear-gradient(90deg, rgba(17, 23, 22, 0.56) 0%, rgba(17, 23, 22, 0.18) 100%);
+}
+
+.broker-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 6rem 1.5rem 2rem;
+  text-align: center;
+  color: #f7f0e4;
+}
+
+.broker-hero-content h1 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 6vw, 5.8rem);
+  line-height: 0.95;
+}
+
+.broker-hero-content p:not(.eyebrow) {
+  max-width: 40rem;
+  margin: 1rem auto 0;
+  color: rgba(247, 240, 228, 0.84);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.broker-search-card {
+  position: relative;
+  z-index: 1;
+  width: min(920px, calc(100% - 2rem));
+  margin: 3rem auto 0;
+  padding: 1.35rem;
+  border-radius: 24px;
+  background: rgba(255, 251, 245, 0.94);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.14);
+}
+
+.broker-search-card strong {
+  display: block;
+  margin-top: 0.4rem;
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+}
+
+.broker-search-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.broker-search-tabs span {
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(28, 49, 45, 0.08);
+  color: #1c312d;
+  font-weight: 700;
+}
+
+.broker-market-row {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.65rem;
+}
+
+.broker-market-row span {
+  padding: 0.72rem 0.95rem;
+  border-radius: 999px;
+  border: 1px solid rgba(31, 31, 26, 0.08);
+  background: #fffdf9;
+  font-weight: 600;
+}
+
+.broker-search-card .hero-actions {
+  justify-content: center;
+  margin-top: 1.1rem;
+}
+
+.brand-intro-section {
+  padding-top: 5rem;
+}
+
+.brand-intro-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.brand-intro-grid h2,
+.service-editorial-card h3,
+.split-showcase-copy h2 {
+  margin: 0;
+  font-family: var(--font-serif);
+}
+
+.service-editorial-section {
+  padding-top: 2rem;
+}
+
+.service-editorial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.service-editorial-card {
+  padding: 1.9rem;
+  border-radius: 28px;
+  border: 1px solid rgba(31, 31, 26, 0.08);
+  background: rgba(255, 251, 245, 0.84);
+  box-shadow: 0 16px 44px rgba(17, 24, 22, 0.05);
+}
+
+.service-editorial-card h3 {
+  font-size: 1.55rem;
+}
+
+.service-editorial-card p {
+  color: #65615c;
+  line-height: 1.8;
+}
+
+.service-editorial-card a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #1c312d;
+  font-weight: 700;
+}
+
+.split-showcase-section {
+  padding-top: 2rem;
+}
+
+.split-showcase-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.split-showcase-visual {
+  overflow: hidden;
+  border-radius: 30px;
+  box-shadow: 0 20px 56px rgba(17, 24, 22, 0.08);
+}
+
+.split-showcase-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.split-showcase-copy h2 {
+  font-size: clamp(2.1rem, 4vw, 3.5rem);
+  line-height: 1;
+}
+
 @media (max-width: 980px) {
   .signature-grid,
   .luxury-card-grid,
   .market-grid,
-  .process-minimal-grid {
+  .process-minimal-grid,
+  .brand-intro-grid,
+  .service-editorial-grid,
+  .split-showcase-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1684,6 +1874,14 @@ body {
   .luxury-hero-clean {
     padding: 5rem 2rem 7rem;
   }
+
+  .broker-hero-content {
+    padding: 4.5rem 1.25rem 2rem;
+  }
+
+  .broker-hero-frame {
+    min-height: 680px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -1706,6 +1904,24 @@ body {
 
   .luxury-hero-clean {
     padding: 3.5rem 1.25rem 6.5rem;
+  }
+
+  .broker-hero {
+    padding-top: 1.25rem;
+  }
+
+  .broker-hero-frame {
+    min-height: 640px;
+  }
+
+  .broker-hero-content {
+    padding: 3.5rem 1rem 1.5rem;
+  }
+
+  .broker-search-card {
+    width: calc(100% - 1rem);
+    margin-top: 2rem;
+    padding: 1rem;
   }
 
   .hero-signature-card {
