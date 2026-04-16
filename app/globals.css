@@ -1852,6 +1852,7 @@ body {
   overflow: hidden;
   border-radius: 36px;
   box-shadow: 0 30px 90px rgba(18, 26, 24, 0.16);
+  min-height: 82vh;
 }
 
 .premium-home-hero-image {
@@ -1866,8 +1867,9 @@ body {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(15, 21, 20, 0.84) 0%, rgba(15, 21, 20, 0.54) 46%, rgba(15, 21, 20, 0.22) 100%),
-    linear-gradient(180deg, rgba(15, 21, 20, 0.1) 0%, rgba(15, 21, 20, 0.4) 100%);
+    linear-gradient(90deg, rgba(15, 21, 20, 0.88) 0%, rgba(15, 21, 20, 0.56) 42%, rgba(15, 21, 20, 0.18) 100%),
+    linear-gradient(180deg, rgba(15, 21, 20, 0.2) 0%, rgba(15, 21, 20, 0.46) 100%),
+    radial-gradient(circle at top center, rgba(255, 244, 221, 0.1), transparent 34%);
 }
 
 .premium-home-hero-grid {
@@ -1877,37 +1879,76 @@ body {
   grid-template-columns: minmax(0, 1.1fr) minmax(300px, 380px);
   gap: 2rem;
   align-items: end;
-  min-height: 700px;
-  padding: 4.5rem 3rem 3rem;
+  min-height: 82vh;
+  padding: 5.5rem 3rem 3rem;
 }
 
 .premium-home-copy {
   color: #f8f1e5;
-  max-width: 720px;
+  max-width: 640px;
+}
+
+.hero-kicker-row {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.hero-kicker {
+  display: inline-flex;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(248, 241, 229, 0.92);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.muted-kicker {
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(248, 241, 229, 0.76);
 }
 
 .premium-home-copy h1 {
   margin: 0;
   font-family: var(--font-serif);
-  font-size: clamp(3rem, 5.4vw, 5.7rem);
-  line-height: 0.94;
-  max-width: 12ch;
+  font-size: clamp(2.45rem, 4.3vw, 4.6rem);
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+  max-width: 11.5ch;
 }
 
-.premium-home-copy p:not(.eyebrow) {
-  max-width: 40rem;
+.premium-home-copy p {
+  max-width: 35rem;
   margin-top: 1rem;
-  color: rgba(248, 241, 229, 0.84);
-  line-height: 1.85;
-  font-size: 1.04rem;
+  color: rgba(248, 241, 229, 0.82);
+  line-height: 1.75;
+  font-size: 0.98rem;
 }
 
 .premium-marino-card {
   padding: 1.35rem;
   border-radius: 24px;
-  background: rgba(249, 244, 236, 0.92);
+  background: rgba(249, 244, 236, 0.9);
   box-shadow: 0 22px 64px rgba(0, 0, 0, 0.18);
   backdrop-filter: blur(18px);
+}
+
+.premium-marino-label {
+  display: inline-flex;
+  margin-bottom: 0.85rem;
+  padding: 0.38rem 0.72rem;
+  border-radius: 999px;
+  background: rgba(28, 49, 45, 0.08);
+  color: #1c312d;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  font-weight: 800;
 }
 
 .premium-marino-head {
@@ -1987,12 +2028,13 @@ body {
 
 .premium-stat-strip strong {
   font-family: var(--font-serif);
-  font-size: 1.18rem;
+  font-size: 1.05rem;
 }
 
 .premium-stat-strip span {
   margin-top: 0.2rem;
   color: #66635d;
+  font-size: 0.92rem;
 }
 
 .premium-services-section {
@@ -2190,6 +2232,10 @@ body {
 
   .premium-home-copy h1 {
     max-width: none;
+  }
+
+  .hero-kicker-row {
+    gap: 0.45rem;
   }
 
   .premium-stat-strip {

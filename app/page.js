@@ -58,9 +58,10 @@ export default function HomePage() {
 
             <div className="premium-home-hero-grid">
               <div className="premium-home-copy">
-                <p className="eyebrow light-eyebrow">
-                  Marino Castro | New Jersey Realtor And Real Estate Investor
-                </p>
+                <div className="hero-kicker-row">
+                  <span className="hero-kicker">New Jersey Real Estate</span>
+                  <span className="hero-kicker muted-kicker">Marino Castro</span>
+                </div>
                 <h1>Buy well. Sell with confidence. Choose a direct buyer when it makes sense.</h1>
                 <p>
                   Marino Castro works with buyers, sellers, and property owners
@@ -79,6 +80,7 @@ export default function HomePage() {
               </div>
 
               <aside className="premium-marino-card">
+                <span className="premium-marino-label">Realtor + Investor</span>
                 <div className="premium-marino-head">
                   <img
                     src="/assets/marino-profile.jpg"
